@@ -1,0 +1,36 @@
+<div style="width:200px;margin-left:126px ">    <ion-range-slider ngDefaultControl
+                              type="double"
+                              from_shadow="true"
+                              to_shadow="true"
+                              from_value="fromvalue"
+                              to_value="tovalue" 
+                              grid="false"
+                              grid_num="10"
+                              decorate_both="false"     
+                              keyboard="true"
+                              keyboard_step="5"
+                              step="5"
+                              [from]="auxRiskScoreFrom || null"
+                              [to]="auxRiskScoreTo || null"
+                              (onFinish)="myOnFinish($event)"
+                              [values]="dateData"
+                              [from]="value1">
+            </ion-range-slider></div>
+
+
+
+<div style="width: 40%;">
+  
+  <canvas
+      baseChart
+      [chartType]="'bar'"
+      [datasets]="chartData"
+      [labels]="chartLabels"
+      [options]="chartOptions"
+      [legend]="true"
+      [colors]="currLineChartColor"
+      
+      (chartClick)="onChartClick($event)">
+  </canvas>
+</div>	
+<div>
