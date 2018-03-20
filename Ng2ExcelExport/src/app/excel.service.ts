@@ -35,8 +35,8 @@ export class ExcelService {
   }
 
   private wrapAndCenterCell(cell: XLSX.CellObject) {
-    const wrapAndCenterCellStyle = {  fill: {fgColor:{rgb: "4596E2"} },
-      font:{name:'Calibri',s :'12',bold:true},border:{
+    const wrapAndCenterCellStyle = {  fill: {fgColor:{rgb: "7CA0D8"} },
+      font:{name:'Constantia',s :'12',bold:true},border:{
         top:{ style: 'thick', color: { rgb: "000000" } },
       bottom:{ style: 'thick', color: { rgb: "000000" }},
     left:{ style: 'thick', color: { rgb: "000000" } },
