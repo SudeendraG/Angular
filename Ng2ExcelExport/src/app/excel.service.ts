@@ -28,7 +28,7 @@ export class ExcelService {
        worksheet['!cols'] = wscols;
     }
    
-    const workbook: XLSX.WorkBook = { Sheets: { 'data': worksheet }, SheetNames: ['data'] };
+    const workbook: XLSX.WorkBook = { Sheets: { 'alpha': worksheet,'beta':worksheet }, SheetNames: ['alpha','beta'] };
     // Use XLSXStyle instead of XLSX write function which property writes cell styles.
     const excelBuffer: any = XLSXStyle.write(workbook, { bookType: 'xlsx', type: 'buffer' });
     this.saveAsExcelFile(excelBuffer, excelFileName);
